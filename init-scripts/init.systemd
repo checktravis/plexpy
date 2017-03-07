@@ -4,21 +4,22 @@
 #
 # INSTALLATION NOTES
 #
-#   1. Rename this file as you want, ensuring that it ends in .service
-#       e.g. 'plexpy.service'
+#  1. do this:
+# sudo su
+# cd /opt
+# git clone https://github.com/JonnyWong16/plexpy.git
+# cp plexpy/init-scripts/init.systemd /lib/systemd/system/plexpy.service
+# adduser --system --no-create-home plexpy
+# chown plexpy:nogroup -R /opt/plexpy
 #
 #   2. Adjust configuration settings as required.  More details in the
 #      "CONFIGURATION NOTES" section shown below.
 #
-#   3. Copy this file into your systemd service unit directory, which is
-#      often '/lib/systemd/system'.
+#   3. do this:
 #
-#   4. Enable boot-time autostart with the following commands:
-#       systemctl daemon-reload
-#       systemctl enable plexpy.service
-#
-#   5. Start now with the following command:
-#       systemctl start plexpy.service
+# systemctl daemon-reload
+# systemctl enable plexpy.service
+# systemctl start plexpy.service
 #
 # CONFIGURATION NOTES
 #
